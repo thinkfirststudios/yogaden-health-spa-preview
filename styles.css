@@ -343,6 +343,9 @@ a.card:hover, a.card:focus-visible { border-color: var(--rose); }
 .btn { transition: background-color 200ms ease-out, border-color 200ms ease-out, color 200ms ease-out, transform 250ms ease-out; }
 .btn:hover { transform: translateY(-2px); }
 
+.palette-switch a { color: inherit; text-underline-offset: .2em; }
+.palette-switch a[aria-current] { font-weight: 600; text-decoration: none; }
+
 /* the settle and the rule */
 .js .settle { opacity: 0; transform: translateY(10px); transition: opacity 520ms ease-out, transform 520ms ease-out; }
 .js .settle.in { opacity: 1; transform: none; }
