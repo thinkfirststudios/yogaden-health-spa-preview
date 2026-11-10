@@ -1,0 +1,28 @@
+/* Homepage option A: editorial, wine and coral on cream */
+:root {
+  --cream: #FBF6F0; --cream-2: #F5ECE3; --blush: #F8E1D6; --butter: #FBEBD9; --peach-wash: #F9E4D8;
+  --peach: #F6D2BF; --rose-soft: #F0B49A; --rose: #E8805A; --rose-mid: #C9603F; --rose-ink: #A8432A;
+  --anchor: #6B1E2E; --anchor-deep: #3E0F19; --anchor-soft: #8E4352; --ink: #2A1418; --ink-soft: #5E4448; --line: #EAD8CE;
+  --momenceColorBackground: #FBF6F0; --momenceColorPrimary: 107, 30, 46; --momenceColorWhite: 251, 246, 240; --momenceColorBlack: 42, 20, 24;
+}
+.va-hero { position: relative; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1fr); gap: 2.5rem; padding: clamp(2.5rem, 6vw, 4rem) var(--gutter); background: var(--cream); }
+.va-copy { position: relative; z-index: 1; }
+.va-hero .hero-title { color: var(--anchor); }
+.va-hero .john p.hero-close { color: var(--anchor); }
+.va-hero .john strong { color: var(--rose-ink); }
+.va-collage { position: relative; min-height: 30rem; }
+.va-sun { position: absolute; top: -4%; right: -10%; width: 62%; aspect-ratio: 1; border-radius: 50%; background: var(--rose-soft); animation: soft-in 1200ms ease-out 200ms both; }
+.va-main { position: relative; display: block; width: 74%; margin-left: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--radius); box-shadow: 16px 16px 0 var(--anchor); animation: soft-in 1100ms cubic-bezier(.2, .7, .2, 1) 150ms both; }
+.va-small { position: absolute; left: 0; bottom: 4%; width: 40%; aspect-ratio: 4 / 5; object-fit: cover; border: 7px solid var(--cream); border-radius: var(--radius); transform: rotate(-4deg); box-shadow: 0 18px 30px -16px rgba(62, 15, 25, .5); animation: soft-in 1100ms cubic-bezier(.2, .7, .2, 1) 650ms both; }
+.va-statement { background: var(--rose); }
+.va-statement .giant, .va-statement .pull { color: var(--anchor-deep); }
+.va-statement .giant-copy { color: var(--ink); }
+.va-statement .statement-photo img { box-shadow: -16px 16px 0 var(--anchor); }
+
+@media (min-width: 62rem) and (min-height: 36rem) {
+  .va-hero { height: calc(100svh - 7rem); grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); align-items: center; gap: clamp(2rem, 4vw, 5rem); padding-block: clamp(1rem, 3vh, 2.5rem); }
+  .va-collage { height: 100%; min-height: 0; }
+  .va-main { position: absolute; right: 5%; top: 5%; height: 86%; width: auto; max-width: 88%; margin: 0; }
+  .va-small { left: 0; bottom: 3%; height: 44%; width: auto; }
+  .va-sun { top: 0; right: -6%; height: 64%; width: auto; }
+}
