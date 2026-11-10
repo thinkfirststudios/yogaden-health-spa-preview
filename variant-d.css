@@ -1,0 +1,38 @@
+/* Homepage option D: poster, paper and charcoal with cherry */
+@font-face { font-family: "Bricolage Grotesque"; src: url("assets/fonts/bricolage-grotesque-500.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Bricolage Grotesque"; src: url("assets/fonts/bricolage-grotesque-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+:root {
+  --display: "Bricolage Grotesque", "Segoe UI", sans-serif; --serif: "Instrument Sans", "Segoe UI", sans-serif;
+  --cream: #F6F5F1; --cream-2: #ECEAE4; --blush: #F4E4E1; --butter: #F1EFEA; --peach-wash: #F3EAE7;
+  --peach: #F1DCD8; --rose-soft: #E7C2BD; --rose: #D35A5F; --rose-mid: #B8434A; --rose-ink: #A8232E;
+  --anchor: #A8232E; --anchor-deep: #1E1A19; --anchor-soft: #6A5E5B; --ink: #1E1A19; --ink-soft: #57504D; --line: #DEDAD3;
+  --momenceColorBackground: #F6F5F1; --momenceColorPrimary: 168, 35, 46; --momenceColorWhite: 246, 245, 241; --momenceColorBlack: 30, 26, 25;
+}
+h1, h2, h3, h4 { letter-spacing: -.025em; }
+.giant, .home-title, .every-panel h2, .meet-panel h2, .healing-head h2, .closing h2, .page-head h1 { font-weight: 700; letter-spacing: -.035em; line-height: .98; }
+.vd-hero { background: var(--cream); padding: clamp(2rem, 5vw, 3.5rem) var(--gutter) clamp(2rem, 5vw, 3rem); display: grid; gap: 1.75rem; grid-template-columns: minmax(0, 1fr); }
+.vd-hero .john { display: contents; }
+.vd-hero .hero-title { color: var(--anchor-deep); font-weight: 700; letter-spacing: -.04em; line-height: .95; font-size: clamp(2.75rem, 1.5rem + 5.5vw, 5rem); margin: 0 !important; }
+.vd-text { font-size: 1.05rem; }
+.vd-text p { font-family: var(--text); }
+.vd-hero .john strong { color: var(--rose-ink); font-weight: 600; }
+.vd-hero .john p.hero-close { font-family: var(--display); font-weight: 700; letter-spacing: -.02em; color: var(--rose-ink); line-height: 1.08; }
+.vd-photos { display: grid; grid-template-columns: 1.15fr 1fr; gap: .75rem; align-items: end; animation: soft-in 1100ms cubic-bezier(.2, .7, .2, 1) 300ms both; }
+.vd-photos img { width: 100%; object-fit: cover; border-radius: var(--radius); }
+.vd-photos img:first-child { aspect-ratio: 3 / 4; }
+.vd-photos img:last-child { aspect-ratio: 4 / 5; margin-bottom: 2.5rem; }
+.vd-rule { height: 4px; background: var(--rose-ink); width: 5rem; border-radius: 2px; }
+
+@media (min-width: 62rem) and (min-height: 36rem) {
+  .vd-hero { height: calc(100svh - 7rem); grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); grid-template-rows: auto auto minmax(0, 1fr); column-gap: clamp(2rem, 4vw, 5rem); row-gap: clamp(.75rem, 2vh, 1.5rem); padding-block: clamp(1rem, 3vh, 2.5rem); }
+  .vd-hero .hero-title { grid-column: 1 / -1; grid-row: 1; font-size: clamp(2.6rem, min(5.6vw, 9.6vh), 9rem); max-width: 15em; }
+  .vd-rule { grid-column: 1; grid-row: 2; }
+  .vd-text { grid-column: 1; grid-row: 3; columns: 2; column-gap: clamp(1.5rem, 2.5vw, 3rem); align-self: start; }
+  .vd-text p { break-inside: avoid; }
+  .vd-hero .john .vd-text p { font-size: clamp(.9375rem, min(1.3vw, 2.4vh), 1.75rem); line-height: 1.38; margin-bottom: .6em; max-width: none; }
+  .vd-hero .john .vd-text p.hero-close { font-size: clamp(1.15rem, min(1.9vw, 3.4vh), 2.75rem); margin-top: 0; }
+  .vd-text .hero-action { break-inside: avoid; margin-top: .9rem; }
+  .vd-photos { grid-column: 2; grid-row: 2 / span 2; min-height: 0; height: 100%; align-items: stretch; }
+  .vd-photos img:first-child, .vd-photos img:last-child { height: 100%; aspect-ratio: auto; min-height: 0; }
+  .vd-photos img:last-child { height: 82%; align-self: end; margin-bottom: 0; }
+}

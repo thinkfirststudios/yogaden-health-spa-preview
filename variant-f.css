@@ -1,0 +1,22 @@
+/* Homepage option F: hot pink with white headline, powder blue as the third color. Loads after variant-b.css */
+@font-face { font-family: "Bricolage Grotesque"; src: url("assets/fonts/bricolage-grotesque-500.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Bricolage Grotesque"; src: url("assets/fonts/bricolage-grotesque-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+:root {
+  --display: "Bricolage Grotesque", "Segoe UI", sans-serif; --serif: "Instrument Sans", "Segoe UI", sans-serif;
+  --cream: #FBF7F5; --cream-2: #F2EEF0; --blush: #FDE6EC; --butter: #EAF2F8; --peach-wash: #FDE3EA;
+  --peach: #FAD2DE; --rose-soft: #CADFEE; --rose: #F2557F; --rose-mid: #A3BFD4; --rose-ink: #C4003C;
+  --anchor: #C8003F; --anchor-deep: #3A0E1F; --anchor-soft: #E05A80; --ink: #2A161E; --ink-soft: #5C4650; --line: #EBDADF;
+  --hot-pink: #F5054F; --on-bold: #FFF8F4; --powder-blue: #CADFEE;
+  --momenceColorBackground: #FBF7F5; --momenceColorPrimary: 200, 0, 63; --momenceColorWhite: 251, 247, 245; --momenceColorBlack: 42, 22, 30;
+}
+h1, h2, h3, h4 { letter-spacing: -.025em; }
+.giant, .home-title, .every-panel h2, .meet-panel h2, .healing-head h2, .closing h2 { font-weight: 700; letter-spacing: -.035em; line-height: .98; }
+.vb-hero { background: var(--hot-pink); }
+.vb-hero .hero-title { color: var(--on-bold); font-weight: 700; letter-spacing: -.035em; line-height: 1; }
+.vb-sun { background: var(--powder-blue); }
+.vb-card p.hero-close { color: var(--rose-ink); font-family: var(--display); font-weight: 700; letter-spacing: -.02em; }
+.vb-card strong { color: var(--rose-ink); }
+.vb-card .hero-action .btn { background: var(--anchor); border-color: var(--anchor); color: var(--on-bold); }
+.healing-panel.dark { background: var(--anchor); }
+.healing-panel .btn-outline { color: var(--on-bold); border-color: var(--on-bold); }
+.meet-panel { background: var(--powder-blue); }

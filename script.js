@@ -109,7 +109,10 @@
   if (!reduced && 'IntersectionObserver' in window) {
     var soft = '.giant, .giant-copy, .home-title, .every-panel, .healing-head, .service-card, .meet-panel, .event, .map-link, .closing h2, .closing .actions, .strip-item, .pass:not(.settle), .service, .signature';
     var photos = '.statement-photo, .every-photo, .meet-photo, .band-image';
-    var softEls = Array.prototype.slice.call(document.querySelectorAll(soft));
+    // Elements that already settle in on their own are left to that animation
+    var softEls = Array.prototype.slice.call(document.querySelectorAll(soft)).filter(function (el) {
+      return !el.classList.contains('settle');
+    });
     var photoEls = Array.prototype.slice.call(document.querySelectorAll(photos));
     softEls.forEach(function (el) {
       el.classList.add('reveal');

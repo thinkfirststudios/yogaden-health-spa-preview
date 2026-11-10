@@ -1,5 +1,7 @@
 /* Homepage option A: editorial, wine and coral on cream */
+@font-face { font-family: "DM Serif Display"; src: url("assets/fonts/dm-serif-display-400.woff2") format("woff2"); font-weight: 400 700; font-display: swap; }
 :root {
+  --display: "DM Serif Display", Georgia, serif;
   --cream: #FBF6F0; --cream-2: #F5ECE3; --blush: #F8E1D6; --butter: #FBEBD9; --peach-wash: #F9E4D8;
   --peach: #F6D2BF; --rose-soft: #F0B49A; --rose: #E8805A; --rose-mid: #C9603F; --rose-ink: #A8432A;
   --anchor: #6B1E2E; --anchor-deep: #3E0F19; --anchor-soft: #8E4352; --ink: #2A1418; --ink-soft: #5E4448; --line: #EAD8CE;
@@ -25,4 +27,7 @@
   .va-main { position: absolute; right: 5%; top: 5%; height: 86%; width: auto; max-width: 88%; margin: 0; }
   .va-small { left: 0; bottom: 3%; height: 44%; width: auto; }
   .va-sun { top: 0; right: -6%; height: 64%; width: auto; }
+  .va-hero .hero-title { font-size: clamp(2.1rem, min(3.9vw, 6.6vh), 6.5rem); }
 }
+.va-hero .hero-title { letter-spacing: -.015em; line-height: 1.02; }
+.va-statement + .strip-band { padding-top: clamp(4rem, 8vw, 7rem); }
