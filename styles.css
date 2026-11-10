@@ -228,8 +228,8 @@ a.card:hover, a.card:focus-visible { border-color: var(--rose); }
 .mobile-bar { display: none; }
 
 /* landing page: the whole welcome in one block beside one photograph */
-.hero { display: grid; grid-template-columns: minmax(0, 1fr); background: var(--rose-soft); }
-.hero-text { background: var(--peach); color: var(--anchor-deep); padding: clamp(3rem, 8vw, 5rem) clamp(1.5rem, 6vw, 5rem); }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr); background: linear-gradient(180deg, var(--peach) 40%, var(--rose-soft) 100%); }
+.hero-text { color: var(--anchor-deep); padding: clamp(3rem, 8vw, 5rem) clamp(1.5rem, 6vw, 5rem); }
 .john { margin: 0; }
 .john p { margin: 0 0 .85em; font-family: var(--serif); font-size: clamp(1.15rem, 1.05rem + .4vw, 1.4rem); line-height: 1.42; }
 .john strong { font-weight: 600; color: var(--anchor); }
@@ -284,14 +284,14 @@ a.card:hover, a.card:focus-visible { border-color: var(--rose); }
   .events-split { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); }
 }
 @media (min-width: 62rem) {
-  .hero { grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); }
+  .hero { grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); background: linear-gradient(90deg, var(--peach) 30%, var(--rose-soft) 72%); }
   .statement-grid { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
 }
 @media (min-width: 62rem) and (min-height: 36rem) {
   .hero { height: calc(100svh - 7rem); grid-template-rows: minmax(0, 1fr); }
   .hero-text { padding: clamp(1rem, 3vh, 3rem) clamp(2rem, 5vw, 7rem); display: flex; flex-direction: column; justify-content: center; }
-  .john { max-width: min(62rem, 100%); }
-  .hero-title { font-size: clamp(2.75rem, min(4.5vw, 7.7vh), 7.5rem); margin: 0 0 .3em; }
+  .john { max-width: min(76rem, 100%); }
+  .hero-title { font-size: clamp(2.9rem, min(5.4vw, calc(13vh - 2rem)), 9rem); margin: 0 0 .28em; }
   .john p { font-size: clamp(1rem, min(1.2vw, 2.15vh), 1.625rem); line-height: 1.36; margin-bottom: .55em; max-width: 38em; }
   .john p.hero-close { font-size: clamp(1.35rem, min(1.95vw, 3.5vh), 3rem); margin-top: .6em; margin-bottom: 0; }
   .hero-action { margin-top: clamp(.75rem, 2vh, 1.75rem); }
