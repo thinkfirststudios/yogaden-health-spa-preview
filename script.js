@@ -95,6 +95,46 @@
     }
   }
 
+  // Opening headline rises word by word
+  var heroTitle = document.querySelector('.hero-title');
+  if (heroTitle && !reduced) {
+    var words = heroTitle.textContent.trim().split(/\s+/);
+    heroTitle.setAttribute('aria-label', words.join(' '));
+    heroTitle.innerHTML = words.map(function (w, i) {
+      return '<span class="word" aria-hidden="true" style="animation-delay:' + (120 + i * 55) + 'ms">' + w + '</span>';
+    }).join(' ');
+  }
+
+  // Sections ease in as they are reached, once
+  if (!reduced && 'IntersectionObserver' in window) {
+    var soft = '.giant, .giant-copy, .home-title, .every-panel, .healing-head, .service-card, .meet-panel, .event, .map-link, .closing h2, .closing .actions, .strip-item, .pass:not(.settle), .service, .signature';
+    var photos = '.statement-photo, .every-photo, .meet-photo, .band-image';
+    var softEls = Array.prototype.slice.call(document.querySelectorAll(soft));
+    var photoEls = Array.prototype.slice.call(document.querySelectorAll(photos));
+    softEls.forEach(function (el) {
+      el.classList.add('reveal');
+      var n = Array.prototype.indexOf.call(el.parentNode.children, el);
+      el.style.transitionDelay = Math.min(n, 6) * 70 + 'ms';
+    });
+    photoEls.forEach(function (el) { el.classList.add('reveal', 'reveal-photo'); });
+    var easeIn = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('in');
+        easeIn.unobserve(entry.target);
+        if (!entry.target.classList.contains('reveal-photo')) {
+          // Hand the element back so hover effects respond straight away
+          var done = entry.target;
+          setTimeout(function () {
+            done.classList.remove('reveal', 'in');
+            done.style.transitionDelay = '';
+          }, 1500);
+        }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    softEls.concat(photoEls).forEach(function (el) { easeIn.observe(el); });
+  }
+
   // The settle and the rule, once each
   var targets = document.querySelectorAll('.settle, .heading');
   if (reduced || !('IntersectionObserver' in window)) {
