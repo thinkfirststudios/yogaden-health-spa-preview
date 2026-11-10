@@ -1,29 +1,23 @@
-/* Homepage option E: bold rose with white type, washed baby blue as the third color */
+/* Homepage option E: Jason's two pinks with white type on an off-white ground */
 :root {
-  --cream: #FBF7F4; --cream-2: #F3ECEE; --blush: #FCE9EE; --butter: #E9F1F7; --peach-wash: #FCE4EA;
-  --peach: #F8D3DE; --rose-soft: #C9DDEC; --rose: #E86A8A; --rose-mid: #9DB9CF; --rose-ink: #B0244B;
-  --anchor: #C72C55; --anchor-deep: #3A1220; --anchor-soft: #D9718D; --ink: #2A1A22; --ink-soft: #5C4A52; --line: #EAD9DE;
-  --bold-rose: #D9214F; --on-bold: #FFF8F4; --baby-blue: #C9DDEC; --blush-side: #FBE4EA;
-  --momenceColorBackground: #FBF7F4; --momenceColorPrimary: 199, 44, 85; --momenceColorWhite: 251, 247, 244; --momenceColorBlack: 42, 26, 34;
+  --cream: #FBF7F4; --cream-2: #F6ECEF; --blush: #FDEEF2; --butter: #FDF0F3; --peach-wash: #FCE8EE;
+  --peach: #FBDDE5; --rose-soft: #F7C3D2; --rose: #F4044E; --rose-mid: #DD2F61; --rose-ink: #B0244B;
+  --anchor: #DD2F61; --anchor-deep: #3A1220; --anchor-soft: #E86A8A; --ink: #2A1A22; --ink-soft: #5C4A52; --line: #F0D9E0;
+  --jason-rose: #DD2F61; --jason-pink: #F4044E; --on-bold: #FFF8F4;
+  --momenceColorBackground: #FBF7F4; --momenceColorPrimary: 221, 47, 97; --momenceColorWhite: 251, 247, 244; --momenceColorBlack: 42, 26, 34;
 }
-.hero { background: var(--blush-side); }
-.hero-visual { position: relative; }
-.hero-visual::before { content: ""; position: absolute; z-index: 0; width: min(78%, 34rem); aspect-ratio: 1; border-radius: 50%; background: var(--baby-blue); left: 50%; translate: -50% 0; top: 1rem; animation: soft-in 1300ms ease-out 200ms both; }
-.hero-arch { position: relative; z-index: 1; }
-.hero-text { color: var(--on-bold); background: var(--bold-rose); }
+.hero { background: linear-gradient(160deg, var(--jason-rose) 35%, var(--jason-pink) 100%); }
+.hero-text { color: var(--on-bold); }
 .hero .hero-title, .hero .john p, .hero .john p.hero-close { color: var(--on-bold); }
 .hero .john strong { color: var(--on-bold); font-weight: 700; text-decoration: underline; text-decoration-color: rgba(255, 248, 244, .55); text-decoration-thickness: 2px; text-underline-offset: .2em; }
 .hero-action .btn { background: var(--on-bold); color: var(--rose-ink); border-color: var(--on-bold); }
-.hero-action .btn:hover { background: var(--baby-blue); border-color: var(--baby-blue); color: var(--anchor-deep); }
+.hero-action .btn:hover { background: transparent; border-color: var(--on-bold); color: var(--on-bold); }
 .hero-action .btn:focus-visible { outline-color: var(--on-bold); }
-.ve-statement { background: var(--baby-blue); }
-.ve-statement .giant { color: var(--anchor-deep); }
+.ve-statement { background: var(--cream); }
+.ve-statement .giant { color: var(--jason-rose); }
 .ve-statement .pull { color: var(--rose-ink); }
-.ve-statement + .strip-band { padding-top: clamp(4rem, 8vw, 7rem); }
-.healing-panel.dark { background: var(--bold-rose); }
+.healing-panel.dark { background: var(--jason-pink); }
 .healing-panel .btn-outline { color: var(--on-bold); border-color: var(--on-bold); }
 @media (min-width: 62rem) {
-  .hero { background: linear-gradient(90deg, var(--bold-rose) 46%, var(--blush-side) 62%); }
-  .hero-visual::before { width: auto; height: 80%; top: 1.5%; right: auto; left: 50%; translate: -50% 0; }
-  .hero-text { background: transparent; }
+  .hero { background: linear-gradient(90deg, var(--jason-rose) 40%, var(--jason-pink) 75%); }
 }
